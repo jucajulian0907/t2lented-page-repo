@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+
+/*** Colors ***/
+$primary: #4d49be;
+$secundary: #f3ea5f;
+$drop-shadow: #2bd1fc;
+$white: #f0e2ef;
+$black: #101820;
+
+/** fonts **/
+$audiowide: "Audiowide", sans-serif;
+$inter: "Inter", sans-serif;
+
+body {
+  background-image: url(/Imagenes/alejandro.jpg);
+  background-color: $primary;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    filter: blur(4px);
+  }
+  50% {
+    filter: blur(0px);
+  }
+}

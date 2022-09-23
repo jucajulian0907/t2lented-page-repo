@@ -1,0 +1,104 @@
+.menu-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 50px;
+}
+
+.menu-hamburguer {
+  display: none;
+  fill: $black;
+
+  .close-icon {
+    display: none;
+    margin-right: 10px;
+    fill: $black;
+  }
+
+  .hamburguer {
+    width: 30px;
+    margin-right: 10px;
+    fill: $black;
+  }
+}
+
+.icon {
+  font-family: $audiowide;
+  cursor: default;
+
+  &::selection {
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+.menu {
+  background-color: transparent;
+  padding: 8px 16px;
+
+  .menu-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $inter;
+  }
+
+  .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(0);
+    font-size: 16px;
+  }
+  .menu-item:hover {
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(180deg);
+
+    .arrow {
+      fill: $white;
+    }
+  }
+}
+
+.menu-nesting {
+  clip-path: var(--clip);
+  transition: clip-path 0.3s;
+  list-style: none;
+  position: absolute;
+  padding: 16px 24px;
+  right: 0px;
+  bottom: -10px;
+  width: 250px;
+  height: max-content;
+  transform: translateY(100%);
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  border: 2px solid $black;
+
+  p {
+    color: $white;
+    margin: 0;
+    font-family: $inter;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  li a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.item-right {
+  display: flex;
+  gap: 24px;
+}
